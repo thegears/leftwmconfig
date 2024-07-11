@@ -1,0 +1,38 @@
+#![enable(implicit_some)]
+#![enable(unwrap_newtypes)]
+(
+    modkey: "Mod4",
+    mousekey: "Mod4",
+    workspaces: [],
+	layouts: [
+		"Monocle"
+	],
+	layout_definitions: [
+		        (name: "Monocle", flip: None, rotate: North, reserve: None, columns: (flip: None, rotate: North, main: None, stack: (flip: None, rotate: North, split: None), second_stack: None)),
+	],
+    tags: [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+    ],
+    keybind: [
+        (command: Execute, value: "rofi -show run", modifier: ["modkey"], key: "r"),
+        (command: Execute, value: "kitty", modifier: ["modkey"], key: "Return"),
+		(command: Execute, value: "maim -s -u | xclip -selection clipboard -t image/png -i", modifier: [""], key: "Print"),
+        (command: CloseWindow, value: "", modifier: ["modkey"], key: "q"),
+        (command: GotoTag, value: "1", modifier: ["modkey"], key: "1"),
+        (command: GotoTag, value: "2", modifier: ["modkey"], key: "2"),
+        (command: GotoTag, value: "3", modifier: ["modkey"], key: "3"),
+        (command: GotoTag, value: "4", modifier: ["modkey"], key: "4"),
+        (command: GotoTag, value: "5", modifier: ["modkey"], key: "5"),
+        (command: MoveToTag, value: "1", modifier: ["modkey", "Shift"], key: "1"),
+        (command: MoveToTag, value: "2", modifier: ["modkey", "Shift"], key: "2"),
+        (command: MoveToTag, value: "3", modifier: ["modkey", "Shift"], key: "3"),
+        (command: MoveToTag, value: "4", modifier: ["modkey", "Shift"], key: "4"),
+        (command: MoveToTag, value: "5", modifier: ["modkey", "Shift"], key: "5"),
+		(command: FocusWindowUp, value: "", modifier: ["Mod1"], key: "q"),
+        (command: FocusWindowDown, value: "", modifier: ["Mod1"], key: "e"),
+    ]
+)
